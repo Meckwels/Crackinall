@@ -10,19 +10,12 @@ GUI_Crackinall is intended to be used for legal security purposes only, and you 
 Content : 
 
 1) GUI-Crackinall.sh : Main script 
-
 2) CapCleaner.sh : Automatic cap files integrity checker
-
 3) DPC.SH :  Automatically concatenate dicos files into pyrit database
 
 Prerequisites :
 
-1) Kali Linux
-
-2) Aircrack-ng
-
-3) Pyrit 
-
-4) Cowpatty
-
-5) Reaver 
+1) Kali version : 4.17.0-kali3-amd64 (with associated tool : aircrack-ng, reaver, pyrit, bully, cowpatty,...)
+2) Bash version : 4.4.23(1)
+3) Nvidia drivers version : 390.77-1
+4) Nvidia cuda toolkit version : 8.0.44-4
