@@ -1,0 +1,138 @@
+#!/bin/bash
+
+#Title........: kali-rtlaptget-nvidia-cudatoolkit
+#Date.........: 15/09/2018
+#Version......: 1.0
+#Usage........: bash kali-rtlaptget-nvidia
+#Bash version : 4.4.23(1)
+#Kali version : 4.17.0-kali3-amd64
+#Nvidia drivers version : 390.77-1
+#Nvidia cuda toolkit version : 8.0.44-4
+#GPU : GeForce GTX 460M
+
+intro10="
+
+
+				-----------------------------------------------------------------------.
+				|               \033[34m\033[1m  Meckwells | 08/07/2018 | kali-rtlapget-nvidia.sh     \033[0m|
+				|  .................:            v2.x              :.................  |
+				|  :                :..............................:                :  |
+				|  :      							    :  |
+				|  :		\033[34m\033[1m#Bash version : 4.4.23(1)\033[0m                           :  |
+				|  :		\033[34m\033[1m#Kali version : 4.17.0-kali3-amd64\033[0m  		    :  |
+				|  :		\033[34m\033[1m#Nvidia drivers version : 390.77-1\033[0m 		    :  |
+				|  :		\033[34m\033[1m#Nvidia cuda toolkit version : 8.0.44-4\033[0m 	    :  |
+				|  :		\033[34m\033[1m#GPU : GeForce GTX 460M\033[0m   			    :  |
+				|  :                                               .................:  |
+				|  :                                               : \033[34m\033[1mMeckwells@2018\033[0m :  |
+				|  :...............................................:................:  |
+				|                     \033[34m\033[1mbash kali-rtlapget-nvidia.sh\033[0m		       |
+				\`----------------------------------------------------------------------'"
+
+echo -e "$intro10"
+echo
+
+
+#Step 1 : Ajout des sources dans le fichier /etc/apt/sources.list
+
+#Ajouter les sources kali pour l'installation des paquets dans le fichier /etc/apt/sources.list
+gedit /etc/apt/sources.list
+
+#add sources in /etc/apt/sourcs.list
+#pour apt-get
+deb http://http.kali.org/kali kali-rolling main contrib non-free >> /etc/apt/sources.list
+deb-src http://http.kali.org/kali kali-rolling main contrib non-free >> /etc/apt/sources.list
+#pour nvidia-cuda-toolkit
+http://deb.debian.org/debian stretch/non-free amd64 Packages >> /etc/apt/sources.list
+
+#Printing sources :
+echo
+echo -e " Etape 1 : Sources "
+echo
+echo -e "https://docs.kali.org/general-use/kali-linux-sources-list-repositories"
+
+
+
+#Step 2 : Installation des drivers awus36ach
+
+	# Install drivers awus36ach
+
+apt update -y && apt upgrade -y && apt dist-upgrade #mise à jour des kernels linux (met également à jour le menu de démarrage Grub...)
+uname -r #détermine version des headers linux
+sudo apt-get install linux-headers-$(uname -r) #installer headers linux
+reboot
+
+	#si nécessaire : 
+
+apt-get update
+apt install realtek-rtl88xxau-dkms
+
+
+	#sources : 
+
+echo -e "https://forums.hak5.org/topic/43124-alfa-awus036ach-kali-configuration-guide/"
+echo
+echo -e "http://hackersgrid.com/2017/08/solved-for-good-unable-to-locate.html"
+echo
+echo -e "https://www.kali.org/news/kali-linux-20171-release/"
+echo
+echo -e "http://www.crack-wifi.com/forum/topic-12194-erreur-pendant-l-installation-driver-awus036ach.html"
+
+
+#Step 3 : Installer drivers nvidia
+
+	#on installe le bon linux header correspondant à celui de votre kernel
+
+apt-get install linux-headers-$(uname -r)
+
+	#on desactive le driver Nouveau depuis le grub et on le met àjour
+
+sed 's/quiet/quiet nouveau.modeset=0/g' -i /etc/default/grub
+update-grub
+
+	# Check if already install
+
+apt-cache policy nvidia-driver
+
+	#Driver Nvidia et nvidia-xconfig
+
+apt-get install nvidia-kernel-dkms
+apt-get install nvidia-xconfig 
+
+	#On recreait un fichier config de Xorg
+
+nvidia-xconfig
+
+	#On redemarre
+
+reboot
+
+	# Check if install correct
+
+apt-cache policy nvidia-driver
+
+	# Print sources :
+
+echo -e "https://www.seeyar.fr/installer-drivers-nvidia-kali-linux/"
+
+
+#Step 4 : Install nvidia-cuda-toolkit
+
+	# Check if already install
+
+apt-cache policy nvidia-cuda-toolkit
+apt update
+
+	# Check if install correct
+
+apt-cache policy nvidia-cuda-toolkit
+
+	# Print sources
+
+echo -e "https://unix.stackexchange.com/questions/381490/what-sources-to-add-in-order-to-install-cuda-toolkit-with-apt-on-debian"
+echo -e "https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html"
+echo -e "https://github.com/JPaulMora/Pyrit/issues/553" 
+
+
+
+
