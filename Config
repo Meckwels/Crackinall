@@ -1,21 +1,12 @@
-Config 
+Config.txt 
 
-#Title........: GUI-Crackinall.sh
-
-#Description..: This is a multi-use bash script for Linux systems to audit your wireless networks.
-
-#Date.........: 08/07/2018
-
-#Version......: 2.0
-
-#Usage........: bash GUI-Crackinall.sh
-
-#Bash version : 4.4.23(1)
-
-#Kali version : 4.17.0-kali3-amd64
-
-#Nvidia drivers version : 390.77-1
-
-#Nvidia cuda toolkit version : 8.0.44-4
-
-#GPU : GeForce GTX 460M
+1) Title........: GUI-Crackinall.sh
+2) Description..: This is a multi-use bash script for Linux systems to audit your wireless networks.
+3) Date.........: 08/07/2018
+4) Version......: 2.0
+5) Usage........: bash GUI-Crackinall.sh
+6) Bash version : 4.4.23(1)
+7) Kali version : 4.17.0-kali3-amd64
+8) Nvidia drivers version : 390.77-1
+9) Nvidia cuda toolkit version : 8.0.44-4
+10) GPU : GeForce GTX 460M
