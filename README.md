@@ -15,4 +15,14 @@ Content :
 
 3) DPC.SH :  Automatically concatenate dicos files into pyrit database
 
+Prerequisites :
 
+1) Kali Linux
+
+2) Aircrack-ng
+
+3) Pyrit 
+
+4) Cowpatty
+
+5) Reaver 
