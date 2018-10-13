@@ -9,10 +9,10 @@ GUI_Crackinall is intended to be used for legal security purposes only, and you 
 
 Content : 
 
-GUI-Crackinall.sh : Main script 
+1) GUI-Crackinall.sh : Main script 
 
-CapCleaner.sh : Automatic cap files integrity checker
+2) CapCleaner.sh : Automatic cap files integrity checker
 
-DPC.SH :  Automatically concatenate dicos files into pyrit database
+3) DPC.SH :  Automatically concatenate dicos files into pyrit database
 
 
