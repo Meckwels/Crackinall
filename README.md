@@ -19,3 +19,10 @@ Prerequisites :
 2) Bash version : 4.4.23(1)
 3) Nvidia drivers version : 390.77-1
 4) Nvidia cuda toolkit version : 8.0.44-4
+
+Also includes Tuto on How to :
+
+1) Install kali
+2) Update sources to use apt-get
+3) Install alfa AWUS036ACH drivers7
+4) Install nvidia driver and cuda toolkit
