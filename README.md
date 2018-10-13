@@ -20,7 +20,7 @@ Prerequisites :
 3) Nvidia drivers version : 390.77-1
 4) Nvidia cuda toolkit version : 8.0.44-4
 
-Also includes Tuto on How to :
+Also includes Tuto on How to : install_all
 
 1) Install kali
 2) Update sources to use apt-get
