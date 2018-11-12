@@ -15,7 +15,7 @@ clear
 #Nvidia cuda toolkit version : 8.0.44-4
 #GPU : GeForce GTX 460M
 
-###################################################### Fonctions utiles ###############################################################################
+###################################################### A propos #######################################################################################
 
 ###################################################### Disclaimer #####################################################################################
 
@@ -289,11 +289,10 @@ intro100="
 
 \033[32m\033[1m  Disclaimer : 
 
-  GUI_Crackinall is intended to be used for legal security purposes only, and you should only use it to protect networks/hosts you own
-  or have permission to test. 
+	GUI_Crackinall is intended to be used for legal security purposes only, and you should only use it to protect networks/hosts you own
+	or have permission to test. 
 
-  Any other use is not the responsibility of the developer(s). Be sure that you understand and are complying with the GUI-Crackinall licenses
-  and laws in your area. In other words, don't be stupid, don't be an asshole, and use this tool responsibly and legally.\033[0m"
+	Any other use is not the responsibility of the developer(s). Be sure that you understand and are complying with laws in your area. In other 	  	words, don't be stupid, don't be an asshole, and use this tool responsibly and legally.\033[0m"
 
 
 intro101="			
